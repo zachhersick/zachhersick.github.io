@@ -56,7 +56,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Your Name</a></h1>
+            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Zach Hersick</a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -86,7 +86,7 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
 
-            <img src="../images/idcardphoto.png" alt="" class="img-fluid">
+            <img src="../images/idcardphoto.PNG" alt="" class="img-fluid">
 
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
@@ -159,23 +159,21 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
 
-            <img src="../images/birthdayparadox.jpg" alt="Our Birthday class" class="img-fluid">
+            <img src="../images/elevfiles.jpg" alt="The file structure and Simulator logic" class="img-fluid">
 
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Birthday Paradox</h3>
+              <h3>Elevator Simulator</h3>
               <p>
-                The Birthday Paradox is a statistical phenomenon wherein if there are greater than 22 people in a room, the chance that at least two of them have the same birthday is greater than 50%. We wanted to test this, by writing a program that mimics it.
+                This project aims to simulate elevators of different types in a building with a designated number of floors. There are four types of elevators, Standard, Freight, Penthouse, and Express, that all have different capacities and scheduling properties. There are also two different types of schedulers, the logic that assigns calls to the elevators, simple and complex. Simple will always assign the call to the leftmost free elevator, while complex finds the most efficient elevator to assign it to.              </p>
+              <p>
+                This project simulates the building based on seven given parameters - the number of floors, the scheduler type, the number of each of the four elevators, and a given text file of calls. Based on the parameters, the algorithm will create a building with a set number of floors, instantiate all the elevators, and then begin pulling from the calls file and assigning the calls to an elevator based on the scheduler type, by a system of rounds. Each round, the calls will be assigned to available elevators, and each elevator that is servicing a call can move one floor. After each round, we print out what calls were assigned, and the status and floor of each elevator. After all rounds are done, the simulation will finish if there are no pending calls left and all of the elevators are idle at the ground floor.
               </p>
               <p>
-                This project runs simulations where 20 trials are run of each multiple of 5 people up to 100, with each person having a randomly generated birthday. After all of the trials are run, it displays the percentage of trials for each increment of people that had duplicate birthdays.
-              </p>
+                This project has quite a few classes. The Elevator abstract class lays the foundation for each of the four specific elevator classes, which inherit from Elevator and make specific changes dependent upon their capabilities and capacity. The ComplexScheduler and SimpleScheduler classes implement the ElevatorScheduler Interface, which outlines the methods that the two scheduler classes will implement, though they are implemented differently based upon their uses. The requestCall class manages the calls, and allows them to be added to an elevator, instantiated and used in general. The Building class creates a building with a specified number of floors, and allows all the schedulers and elevators to be instantiated. We added a Direction enum to control the direction of the elevator, and siumulator is used to read the file and start the simulation. We also used test driven development, so we have test classes for each file except for Simulator.             </p>
               <p>
-                This project has four classes, Birthday, Trial, Simulation, and Experiment. The Birthday class creates the Birthday objects, representing a person with a randomly generated birthday. The Trial class defines one trial in an experiment and checks for duplicate birthdays. The Experiment class runs the specified number of trials with the specified number of people per trial. Finally, the Simulation class brings everything together and runs the complete program.
-              </p>
-              <p>
-                I was responsible for writing and testing the Experiment and Simulation classes. While they were both fairly simple to code, with simple logic that ran the trials and experiments, respectfully, and returning the percentage of trials with duplicate birthdays in each experiment and the final table of data at the end of all of the experiments, the testing of experiment was specifically difficult. This was because the methods within experiment had random object instantiation, but it was used for 20 different size groups and 20 trials for each group. This was challenging, but I eventually realized that if I tested it making sure everyone had the same birthday, it would test the methods correctly. This project helped me shake off the rust of logic and solidify my knowledge of tesing.
+                In this project, I got significantly better at test driven development. It is something that I had no really used before in a full scale project, so it took some time to get used to writing the tests before the actual implementation of the methods. However, my partners and I got the hang of it fairly quick. In this project, I was responsible for the Scheduler Interface and classes, as well as Building and Simulator and the test classes for all of those applicable classes. The ElevatorScheduler Interface and the two classes that implemented it were fairly simple, but testing them was harder. However, I eventually figured out how to test them, similarly to how I did in the Birthday Paradox project above. The hardest part was the Building class. Though it seems easy, it was hard to wrap my mind around what the class was supposed to do. However, after weriting out a plan for the Simulator class, it was a lot easier to create the Building class with the methods needed. Overall, this project was a great learning experience and an amazing way to improve my coding skills.
               </p>
 
 
