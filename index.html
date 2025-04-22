@@ -149,6 +149,35 @@
 
           </div>
         </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+
+            <img src="../images/birthdayparadox.jpg" alt="Our Birthday class" class="img-fluid">
+
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Birthday Paradox</h3>
+              <p>
+                The Birthday Paradox is a statistical phenomenon wherein if there are greater than 22 people in a room, the chance that at least two of them have the same birthday is greater than 50%. We wanted to test this, by writing a program that mimics it.
+              </p>
+              <p>
+                This project runs simulations where 20 trials are run of each multiple of 5 people up to 100, with each person having a randomly generated birthday. After all of the trials are run, it displays the percentage of trials for each increment of people that had duplicate birthdays.
+              </p>
+              <p>
+                This project has four classes, Birthday, Trial, Simulation, and Experiment. The Birthday class creates the Birthday objects, representing a person with a randomly generated birthday. The Trial class defines one trial in an experiment and checks for duplicate birthdays. The Experiment class runs the specified number of trials with the specified number of people per trial. Finally, the Simulation class brings everything together and runs the complete program.
+              </p>
+              <p>
+                I was responsible for writing and testing the Experiment and Simulation classes. While they were both fairly simple to code, with simple logic that ran the trials and experiments, respectfully, and returning the percentage of trials with duplicate birthdays in each experiment and the final table of data at the end of all of the experiments, the testing of experiment was specifically difficult. This was because the methods within experiment had random object instantiation, but it was used for 20 different size groups and 20 trials for each group. This was challenging, but I eventually realized that if I tested it making sure everyone had the same birthday, it would test the methods correctly. This project helped me shake off the rust of logic and solidify my knowledge of tesing.
+              </p>
+
+
+            </div>
+
+
+
+          </div>
+        </div>
       </div>
       
 
@@ -171,7 +200,7 @@
           <div class="col-md-12 text-center">
             <p class="mb-0">
               <span class="icon-mail_outline d-block h4 text-primary"></span>
-              <span>email address</span>
+              <span>zach.hersick@gmail.com</span>
             </p>
           </div>
           
