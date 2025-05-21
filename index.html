@@ -184,6 +184,40 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Projects</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+
+            <img src="../images/elevfiles.jpg" alt="The file structure and Simulator logic" class="img-fluid">
+
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Valet Simulator</h3>
+              <p>
+                We decided to create the Valet Simulator because when we were deciding between projects, we thought it would be an interesting implementation of logic. On top of that, when we were deciding, I had recently gone skiing in Big Bear. I had noticed the way that the resort parked the cars at the mountain parking lot, which was very strategic. I wanted to recreate that in a project, so I conceived SpaceOptimizationAssigner to be able to mimic the strategy of assigning cars to certain parking spots.              </p>
+              <p>
+                To think of it simply, the Valet Simulator parks incoming cars at a certain spot in the parking lot and records where it is. Valet simulator takes a list of cars from one of three sources (chosen by the user): user input, a file, or random generation. Once it has a list of cars, a parking lot is defined with a certain number of spots, and which spots in that parking lot are vip, ev, each specific size, or any combination of the three. The cars are assigned based on one of three assigners (chosen by the user): normal, which assigns the car to the first spots that fits the car, VIP, which is the same as normal but works with VIP spots, and Space, which will always choose the smallest then nearest parking spot. After every car that comes in, it prints out the information in the terminal and visualizes the parking lot in a GUI. After every move, there is a chance that a vehicle will leave and open up the spot for other cars.
+              </p>
+              <p>
+                For the design, we began by creating a powerpoint that outlined all of the classes we wanted and their methods, and follows that up by implementing a UML diagram of the entire project. This allowed us to map out what we needed to do, and stub out our project before the test driven development commenced. Then, it was just filling out the project, debugging, and testing. We chose Java because it was what we had been learning design patterns in all year long, so it was easier for us to implement the Strategy and Factory Method patterns. Overall, design went well.            </p>
+              <p>
+                Overall, the implementation was relatively unproblematic, and very interesting. I was responsible for the AssignmentStrategy Interface, and the three concrete Assigners that implemented it. NormalAssigner was pretty straight forward, since all I had to do was loop through the ArrayList of parking spots and find the first one that fit all of the conditions of the car. VIPAssigner was also somewhat easier but slightly harder than Normal, because I had to work in the VIP section of the parking lot and working with the different characteristics that the cars could have inside the VIP section of the lot. SpaceOptimizationAssigner was definitely the hardest because I need to make sure it was always picking the best possible spot for the vehicle without knowing what vehicles were coming next. Also, it was tricky to figure out what should be prioritized, but eventually I came to the conclusion that it is more important not to waste a bigger spot on a smaller car than it is for the spot to be closer, so that I could ensure that the most possible cars could fit, hence the name space optimization assigner.
+              </p>
+
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
       
 
     </section>
